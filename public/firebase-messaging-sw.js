@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 importScripts("https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js");
 importScripts(
   "https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js"
@@ -27,6 +26,5 @@ messaging.onBackgroundMessage((payload) => {
     body: payload.notification.body,
   };
 
-  // eslint-disable-next-line no-restricted-globals
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
