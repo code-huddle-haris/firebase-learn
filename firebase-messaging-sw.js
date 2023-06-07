@@ -9,7 +9,6 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-// eslint-disable-next-line no-undef
 messaging.onBackgroundMessage((payload) => {
   console.log(
     "[firebase-messaging-sw.js] Received background message ",
