@@ -13,8 +13,10 @@ function App() {
         vapidKey:
           "BN9u9j6dLIbMgNXh1lNR12st4_1GCwrR2Hbshrsbu4Q_jWa_oZMkok-hY9zJvPaUI-I4SVp9ukWO5MWNG9KbgoQ",
       });
-      console.log("Token Gen", token);
-      // Send this token  to server ( db)
+
+      console.log("Token: ", token);
+
+      //Get notification
     } else if (permission === "denied") {
       alert("You denied for the notification");
     }

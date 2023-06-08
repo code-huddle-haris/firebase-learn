@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getMessaging } from "firebase/messaging";
+import { getMessaging, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAgKkeceVvlBUVYSm-Ju8kPtiAfNbGn9tw",
@@ -10,6 +10,13 @@ const firebaseConfig = {
   appId: "1:616518155239:web:98add7b2f3df6af9d01b42",
   measurementId: "G-ZMCKBMWYDN",
 };
+
+export const onMessageListener = () =>
+  new Promise((resolve) => {
+    onMessage(messaging, (payload) => {
+      resolve(payload);
+    });
+  });
 
 export const app = initializeApp(firebaseConfig);
 
